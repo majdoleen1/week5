@@ -1,6 +1,6 @@
 module "Create_A_VM" {
   source = "./Modules/VM"
-  name                            = "vm"
+  name                            = "vm-${terraform.workspace}"
   resource_group_name             = module.Create_Networking_resource_group.name
   location                        = var.region
   size                            = "Standard_b1s"
